@@ -58,4 +58,8 @@ node default {
   #}
   
   include skeleton
+  
+  if $::virtual == 'docker' {
+    notify {"this is a virtual machine of type capitalize(${::virtual})":}
+  }
 }
