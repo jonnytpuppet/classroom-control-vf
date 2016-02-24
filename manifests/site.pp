@@ -62,4 +62,7 @@ node default {
   if $::virtual == 'docker' {
     notify {"this is a virtual machine of type ${capitalize($::virtual)}":}
   }
+  
+  user::managed_user { ['billy','bob','thorton'] :}
+  
 }
