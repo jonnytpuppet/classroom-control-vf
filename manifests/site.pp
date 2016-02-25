@@ -65,6 +65,6 @@ node default {
   
   users::managed_user { ['billy','bob','thorton'] :}
   
-  notify{"${Hiera('message')}"}
+  notify{"${Hiera('message')}":}
   
 }
